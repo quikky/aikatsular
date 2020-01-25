@@ -7,6 +7,7 @@ import { AikatsuStarsComponent } from './aikatsu-stars/aikatsu-stars.component';
 import { AikatsuFriendsComponent } from './aikatsu-friends/aikatsu-friends.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { reducers, metaReducers } from './reducers';
         strictStateImmutability: true,
         strictActionImmutability: true
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
