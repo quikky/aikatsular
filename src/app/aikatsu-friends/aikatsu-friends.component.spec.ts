@@ -8,9 +8,8 @@ describe('AikatsuFriendsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AikatsuFriendsComponent ]
-    })
-    .compileComponents();
+      declarations: [AikatsuFriendsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
