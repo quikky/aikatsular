@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBAKFo6ZKBSUfURypqYzuCyxOmHL0fU_Ws',
+    authDomain: 'aikatsular-main.firebaseapp.com',
+    databaseURL: 'https://aikatsular-main.firebaseio.com',
+    projectId: 'aikatsular-main',
+    storageBucket: 'aikatsular-main.appspot.com',
+    messagingSenderId: '273162228225'
+  }
 };
 
 /*
