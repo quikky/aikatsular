@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "predeploy": "ng build",
+    "public": "dist/aikatsular",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
