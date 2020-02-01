@@ -1,5 +1,11 @@
 <app-header></app-header>
-<div class="main" [style.background]="imgUrl ? 'url(' + imgUrl + ')' : ''">
+<div class="main">
+  <img
+    class="bg"
+    [src]="imgUrl ? (imgUrl | safeUrl) : ''"
+    (load)="imgLoaded = true"
+    [ngClass]="{ 'loaded animated fadeIn slow': imgLoaded }"
+  />
   <div>Top {{ title }}</div>
   <router-outlet></router-outlet>
 </div>

@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FirestoreTestComponent } from './firestore-test/firestore-test.component';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     AikatsuFriendsComponent,
     HeaderComponent,
     FooterComponent,
-    FirestoreTestComponent
+    FirestoreTestComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

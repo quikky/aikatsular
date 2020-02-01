@@ -9,6 +9,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 export class AppComponent implements OnInit {
   title = 'Aikatsular';
   imgUrl: string;
+  imgLoaded: boolean;
 
   constructor(private storage: AngularFireStorage) {}
 
