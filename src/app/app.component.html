@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="main" [style.background]="'url(' + imgUrl + ')'">
+<div class="main" [style.background]="imgUrl ? 'url(' + imgUrl + ')' : ''">
   <div>Top {{ title }}</div>
   <router-outlet></router-outlet>
 </div>

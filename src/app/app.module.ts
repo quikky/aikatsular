@@ -14,13 +14,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FirestoreTestComponent } from './firestore-test/firestore-test.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
     AikatsuStarsComponent,
     AikatsuFriendsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FirestoreTestComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     MatToolbarModule
   ],
   // exports: [MatToolbarModule],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
