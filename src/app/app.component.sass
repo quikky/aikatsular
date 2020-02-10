@@ -1,12 +1,13 @@
 .main
+  color: #fffffe
+  width: 100%
+  overflow: hidden
   position: relative
-  padding-bottom: 80px
+  background-attachment: fixed
   background-size: cover
+  background-position: center
   // header + footer px
   min-height: calc(100vh - 150px)
-  .bg
-    z-index: -1
-    position: fixed
-    display: none
-    &.loaded
-      display: block
+  visibility: hidden
+  &.loaded
+    visibility: visible

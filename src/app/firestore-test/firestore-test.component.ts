@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoneTestService } from '../services/firestone-test.service';
-import { CrazyFunkTemp } from '../interfaces/crazy-funk-temp';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
+import { Category } from '../interfaces/category';
 
 @Component({
   selector: 'app-firestore-test',
@@ -8,11 +10,23 @@ import { CrazyFunkTemp } from '../interfaces/crazy-funk-temp';
   styleUrls: ['./firestore-test.component.sass']
 })
 export class FirestoreTestComponent implements OnInit {
-  datas: CrazyFunkTemp[];
+  categorys: Observable<Category[]>;
+  imgUrl: string;
+  imgLoaded: boolean;
 
-  constructor(private firestoneTestService: FirestoneTestService) {}
+  constructor(
+    private firestoneTestService: FirestoneTestService,
+    private storage: AngularFireStorage
+  ) {}
 
-  async ngOnInit() {
-    this.datas = await this.firestoneTestService.getDatas();
+  ngOnInit() {
+    this.categorys = this.firestoneTestService.category;
+
+    this.storage
+      .ref('images/thirdparty-logos/spotify-logo.png')
+      .getDownloadURL()
+      .subscribe(image => {
+        this.imgUrl = image;
+      });
   }
 }

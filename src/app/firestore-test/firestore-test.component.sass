@@ -1,0 +1,46 @@
+
+.items
+  margin: 48px 64px
+  .item
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    height: 70px
+    margin: 0 0 2em
+    .category
+      display: flex
+      flex-grow: 1
+      text-align: center
+      height: 100%
+      max-width: 500px
+      background: rgb(255,255,250,0.4)
+      transform: skew(20deg)
+      margin: 0 1.5em
+      .text
+        margin: auto 40px
+        transform: skew(-20deg)
+        border-bottom: white solid 3px
+        color: white
+        width: 100%
+        padding: 10px
+        font-family: 'Molle', cursive
+        font-style: italic
+      &:hover
+        background: rgb(255,255,250,0.55)
+        cursor: pointer
+    .spotify-link
+      display: flex
+      align-items: center
+      justify-content: center
+      opacity: 0.7
+      margin: 0 20px
+      img
+        height: 50px
+      &:hover
+        opacity: 1
+    &:nth-child(even)
+      .category
+        transform: skew(-20deg)
+        .text
+          transform: skew(20deg)

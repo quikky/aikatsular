@@ -8,17 +8,17 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class AppComponent implements OnInit {
   title = 'Aikatsular';
-  imgUrl: string;
-  imgLoaded: boolean;
+  bgImgUrlofPreload: string;
+  bgImgUrlofPreloaded: string;
 
   constructor(private storage: AngularFireStorage) {}
 
   ngOnInit() {
     this.storage
-      .ref('images/sumire001.png')
+      .ref('images/thirdparty-logos/star-guardian.png')
       .getDownloadURL()
       .subscribe(image => {
-        this.imgUrl = image;
+        this.bgImgUrlofPreload = image;
       });
   }
 }

@@ -1,6 +1,15 @@
-<p>firestore-test works!</p>
-<hr />
-<div *ngFor="let data of datas">
-  <span>{{ data.category }}</span
-  >: <span>{{ data.id }}</span>
+<div class="items">
+  <div class="item" *ngFor="let category of categorys | async">
+    <div class="category">
+      <div class="text">{{ category.name }}</div>
+    </div>
+    <a
+      class="spotify-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      [href]="'https://open.spotify.com/search/' + category.name"
+    >
+      <img [src]="imgUrl ? (imgUrl | safeUrl) : ''" />
+    </a>
+  </div>
 </div>
