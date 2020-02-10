@@ -1,13 +1,26 @@
 header
   display: flex
+  position: absolute
+  z-index: 1
   align-items: center
   justify-content: center
   height: 50px
   width: 100%
-  color: #67493c
-  background: rgba(91,214,201,0.2)
+  color: #fff
   padding: 10px 0
   .logo
     text-align: center
   .links
     padding: 10px
+  a
+    color: #fff
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.1)
+    filter: blur(5px)
+    pointer-events: none

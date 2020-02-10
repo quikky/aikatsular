@@ -1,5 +1,8 @@
 <div class="items">
-  <div class="item" *ngFor="let category of categorys | async">
+  <div
+    class="item animated fadeInUp slow"
+    *ngFor="let category of categorys | async"
+  >
     <div class="category">
       <div class="text">{{ category.name }}</div>
     </div>
